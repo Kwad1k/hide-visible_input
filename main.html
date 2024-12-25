@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видимість інпута в залежності від стану чекбокса</title>
+</head>
+<body>
+    <input type="checkbox" id="checkbox" onchange="toggleInputVisibility()">
+    <label for="checkbox">Показати/приховати інпут</label>
+    <br>
+    <input type="text" id="textInput" style="display: none;">
+    
+    <script>
+        function toggleInputVisibility() {
+            const checkbox = document.getElementById('checkbox');
+            const textInput = document.getElementById('textInput');
+
+            if (checkbox.checked) {
+                textInput.style.display = 'block';
+            } else {
+                textInput.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
